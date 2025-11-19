@@ -1,0 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.left-panel{
+    background-image: url('./assests/76ers-general-getty.webp');
+    background-size: cover;
+    height: 100%;
+}
