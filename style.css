@@ -1,11 +1,217 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url(./assests/fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+:root{
+    --padding-left: 4rem;
+
+    --light-gray: #e8e8e8;
+    --dark-gray: #c2c2c2;
+    --red: #ed174d;
+    --dark-red: #b51039;
+    --green: #89f27c;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.left-panel{
-    background-image: url('./assests/76ers-general-getty.webp');
+body{
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+}
+
+section.left-panel{
+    background-image: url('./assests/left-panel.jpg');
     background-size: cover;
-    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center logo */
+    align-items: center;
+}
+
+.logo-header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 10px;
+    margin-top: 40vh;
+}
+
+section.left-panel footer{
+    margin-top: auto;
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+section.left-panel footer > a{
+    text-decoration: underline;
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+section.left-panel footer > a:hover{
+    color: var(--dark-gray);
+}
+
+h1{
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.right-panel{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.right-panel > section{
+    flex: 1;
+}
+
+.logo-header-container > img{
+    width: 180px;
+}
+
+.top, .middle, .bottom{
+    padding-left: var(--padding-left);
+}
+
+.right-panel > .top{
+    font-size: 1.5rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.right-panel > .top > p{
+    width: 700px;
+    font-weight: 600;
+}
+
+.right-panel > section:nth-child(odd){
+    background-color: #f2f2f2;
+}
+
+section.middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+section.middle:focus-within{
+    box-shadow: 5px 10px 15px -5px var(--dark-gray);
+}
+
+h2{
+    margin-top: 1rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+input{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--light-gray);
+}
+
+input:focus{
+    box-shadow: 5px 5px 15px -5px var(--dark-gray);
+}
+
+form > div{
+    gap: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.row-1, .row-2, .row-3{
+    display: flex;
+}
+
+.first-name-container,
+.last-name-container,
+.email-container,
+.phone-number-container,
+.password-container,
+.confirm-password-container{
+    display: flex;
+    flex-direction: column;
+}
+
+input:placeholder-shown{
+    border: 1px solid var(--light-gray);
+}
+
+input:not(:placeholder-shown):valid{
+    border: 1px solid var(--green);
+}
+
+input[type='password']:invalid{
+    border: 1px solid var(--red);
+}
+
+section.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+button{
+    padding: 1rem 4rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--red);
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover{
+    background-color: var(--dark-red);
+}
+
+section.bottom > p{
+    font-size: 1.10rem;
+}
+
+section.bottom > p > a{
+    text-decoration: none;
+    color: var(--red);
+    transition: 0.3s ease;
+}
+
+section.bottom > p > a:hover{
+    color: var(--dark-red);
 }
